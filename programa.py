@@ -1,5 +1,5 @@
 import geopandas as gpd
 
 # en pyton todo es un  objeto =
-#  todo tiene atributos y 
-# comportamientos 
+# todo tiene atributos
+# todo tiene comportamientos 
