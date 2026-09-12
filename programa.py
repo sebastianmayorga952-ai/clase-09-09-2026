@@ -8,6 +8,14 @@
  #archivo json 
 
 import geopandas as gpd
+import matplotlib.pyplot as plt
 
-archivo = gpd.read_file("custom.geo.json")
+archivo = gpd.read_file("custom.geo.json", engine="pyogrio")
 
+archivo.head() #muestra las primeras 5 filas del archivo
+print(archivo.head())
+
+archivo.plot()
+
+plt.show()  
+ #muestra las primeras 5 filas del archivo
