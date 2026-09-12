@@ -15,7 +15,21 @@ archivo = gpd.read_file("custom.geo.json", engine="pyogrio")
 archivo.head() #muestra las primeras 5 filas del archivo
 print(archivo.head())
 
-archivo.plot()
+#archivo.plot()
 
-plt.show()  
- #muestra las primeras 5 filas del archivo
+#plt.show()  
+
+print(archivo.crs)
+
+print(archivo.geometry) 
+#print(archivo.columns[1])
+
+for X in range(0,169):
+    print(archivo.columns[X])
+# imprimir los nombres en español de cada pais name_es 
+    print(archivo["name_es"])
+
+# mostra en pantalla el poligono de colombia
+colombia = archivo[archivo["name_es"] == "Colombia"]
+colombia.plot()
+plt.show()
